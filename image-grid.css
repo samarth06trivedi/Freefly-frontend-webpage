@@ -1,0 +1,307 @@
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Image Grid Section */
+.image-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0; /* No gaps between rows */
+  padding: 0;
+  background-color: black;
+  width: 100%;
+}
+
+.grid-row {
+  display: flex;
+  gap: 0; /* No gaps between images */
+  width: 100%;
+}
+
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+/* Overlay Text */
+.content-overlay {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: white;
+  text-align: center;
+  font-family: "Fragment Mono", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.content-overlay h3 {
+  margin: 0;
+  font-size: 4rem ;
+  font-weight: 800;
+}
+
+.content-overlay p {
+  margin: 15px 0 25px;
+  font-size: 2.2rem; 
+  line-height: 1.5;
+}
+
+.content-overlay button {
+  background: transparent;
+  color: white;
+  border: none;
+  padding: 0;
+  font-size: 1.5rem ;
+  font-weight: bold;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.content-overlay button:hover { 
+  text-decoration: underline; 
+}
+
+.content-overlay button:focus {
+  outline: none;
+}
+
+/* Full-Width Rows */
+.grid-row:only-child .grid-item {
+  flex: 1 0 100%;
+}
+
+/* Row-Specific Flexbox Rules */
+.grid-row:nth-child(1) .grid-item { /* Row 1: 2 items */
+  flex: 1 0 50%;
+}
+
+.grid-row:nth-child(2) .grid-item, /* Row 2: 3 items */
+.grid-row:nth-child(3) .grid-item { /* Row 3: 3 items */
+  flex: 1 0 33.3333%;
+  height: 500px;
+}
+
+.grid-row:nth-child(4) .grid-item { /* Row 4: 2 items */
+  flex: 1 0 50%;
+}
+
+.grid-row:nth-child(5) .grid-item { /* Row 5: 4 items */
+  flex: 1 0 25%;
+}
+
+.grid-row:nth-child(6) .grid-item, /* Row 6: 1 item (full width) */
+.grid-row:nth-child(7) .grid-item { /* Row 7: 1 item (full width) */
+  flex: 1 0 100%;
+}
+
+/* Row 8: Two images with 1/3 width each and a blank space */
+.grid-row:nth-child(8) .grid-item {
+  flex: 1 0 33.3333%;
+  height: 300px; /* Consistent height for rows 8, 9, and 10 */
+}
+
+.grid-row:nth-child(8) {
+  gap: 0; /* Creates space between the two images */
+}
+
+/* Row 9 and 10: Consistent height */
+.grid-row:nth-child(9) .grid-item, /* Row 9: 2 items */
+.grid-row:nth-child(10) .grid-item { /* Row 10: 2 items */
+  flex: 1 0 50%;
+  height: 300px; /* Consistent height for rows with 2 items */
+}
+
+/* General Overlay Adjustments for Rows 1 to 5 */
+.grid-row:nth-child(-n+5) .content-overlay {
+  bottom: 2%; /* Move closer to the bottom */
+  text-align: center;
+  color: white; /* Ensure text remains visible */
+  width: 90%; /* Wider overlay width */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, 0); /* Adjust for centering */
+}
+
+/* Heading Styling */
+.grid-row:nth-child(-n+5) .content-overlay h3 {
+  font-size: 2rem; /* Slightly smaller heading */
+  margin-bottom: 0.5rem; /* Reduce spacing below the heading */
+}
+
+/* Paragraph Styling */
+.grid-row:nth-child(-n+5) .content-overlay p {
+  font-size: 1.2rem; /* Slightly larger font size for paragraph */
+  margin: 0.5rem 0; /* Reduce the gap between paragraph and buttons */
+  letter-spacing: 0.03rem; /* Slightly spread out letters */
+  line-height: 1.4; /* Adjust line spacing for readability */
+}
+
+/* Button Styling */
+.grid-row:nth-child(-n+5) .content-overlay button {
+  font-size: 1rem; /* Button text size */
+  padding: 10px 20px; /* Adjust padding for proportion */
+  margin: 5px; /* Keep consistent spacing around buttons */
+}
+
+/* Row 6: Center text in the image */
+.grid-row:nth-child(6) .content-overlay {
+  top: 50%; /* Vertical centering */
+  left: 50%; /* Horizontal centering */
+  transform: translate(-50%, -50%); /* Adjust position to center */
+  text-align: center; /* Ensure text is centered */
+}
+
+.grid-row:nth-child(6) .content-overlay p {
+  max-width: 70%; /* Contain paragraph width */
+  margin: 10px auto; /* Add spacing and center */
+  font-size: 1.2rem; /* Adjust font size */
+}
+
+/* General Styling for Rows 7-10 */
+.grid-row:nth-child(n+7):nth-child(-n+10) .content-overlay {
+  bottom: 10px; /* Position 10px from the bottom */
+  left: 20px; /* Add a slight gap on the left */
+  right: auto; /* Ensure no unintended margin on the right */
+  top: auto; /* Ensure no unintended margin at the top */
+  transform: none; /* Remove centering transform */
+  text-align: left; /* Align text to the left */
+}
+
+/* Font Sizes for Rows 7-10 */
+.grid-row:nth-child(n+7):nth-child(-n+10) .content-overlay h3 {
+  font-size: 2rem; /* Larger heading for all rows */
+  font-weight: bold; /* Emphasize the heading */
+  margin-bottom: 5px; /* Small margin below the heading */
+}
+
+.grid-row:nth-child(n+7):nth-child(-n+10) .content-overlay p {
+  font-size: 1.2rem; /* Slightly smaller for paragraphs */
+  line-height: 1.4; /* Improve readability */
+  max-width: 90%; /* Contain paragraph width */
+}
+
+/* Specific Adjustment for Row 8 */
+.grid-row:nth-child(8) .content-overlay h3 {
+  font-size: 2.2rem; /* Even larger heading for row 8 */
+}
+
+.grid-row:nth-child(8) .content-overlay p {
+  font-size: 1.2rem; /* Distinctly smaller than the heading */
+}
+
+/* Texst color black for specific images */
+/* Specific text and button text color for Image 2 in Row 1 */
+.grid-row:nth-child(1) .grid-item:nth-child(2) .content-overlay,
+.grid-row:nth-child(1) .grid-item:nth-child(2) .content-overlay button {
+  color: #06111b;
+}
+
+/* Specific text and button text color for Image 1 and Image 3 in Row 2 */
+.grid-row:nth-child(2) .grid-item:nth-child(1) .content-overlay,
+.grid-row:nth-child(2) .grid-item:nth-child(1) .content-overlay button,
+.grid-row:nth-child(2) .grid-item:nth-child(3) .content-overlay,
+.grid-row:nth-child(2) .grid-item:nth-child(3) .content-overlay button {
+  color: #06111b;
+}
+
+/* Specific text and button text color for all images in Row 3 */
+.grid-row:nth-child(3) .content-overlay,
+.grid-row:nth-child(3) .content-overlay button {
+  color: #06111b;
+}
+
+@media screen and (min-width: 630px) and (max-width: 1024px) {
+  /* General rule: 2 images per row */
+  .grid-row {
+    display: flex;
+    flex-wrap: wrap; /* Wrap images to the next row if needed */
+    gap: 0; /* No gaps unless explicitly required */
+  }
+
+  /* Default for all grid items */
+  .grid-row .grid-item {
+    flex: 1 0 50%; /* Each image takes half the row width */
+    height: auto; /* Maintain image aspect ratio */
+  }
+
+  /* Exception for Rows 6 and 7 (1 image each, full width) */
+  .grid-row:nth-child(6) .grid-item,
+  .grid-row:nth-child(7) .grid-item {
+    flex: 1 0 100%; /* Full width for single-image rows */
+  }
+}
+
+@media screen and (max-width: 630px) {
+  /* Apply flex direction column to all rows */
+  .grid-row {
+    flex-direction: column;
+  }
+
+  /* Set each grid item to take full width */
+  .grid-row .grid-item {
+    flex: 1 0 100%;
+    height: auto; /* Adjust height to fit the content proportionally */
+  }
+
+  /* Ensure overlays are properly centered for smaller screens */
+  .grid-row .content-overlay {
+    bottom: 5%; /* Adjust overlay position */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, 0);
+    text-align: center; /* Center text alignment */
+    width: 90%; /* Contain overlay width */
+  }
+
+  .grid-row .content-overlay h3 {
+    font-size: 1.5rem; /* Adjust heading size */
+  }
+
+  .grid-row .content-overlay p {
+    font-size: 1rem; /* Adjust paragraph size */
+    margin: 10px auto;
+  }
+
+  .grid-row .content-overlay button {
+    font-size: 0.9rem; /* Adjust button text size */
+    margin: 5px; /* Maintain spacing */
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 630px) {
+  /* For rows 1 to 5: Limit to 2 images per row */
+  .grid-row:nth-child(1) .grid-item,
+  .grid-row:nth-child(2) .grid-item,
+  .grid-row:nth-child(3) .grid-item,
+  .grid-row:nth-child(4) .grid-item,
+  .grid-row:nth-child(5) .grid-item {
+    flex: 1 0 50%; /* Two items per row */
+  }
+
+  /* Keep rows 6 and 7 as 1 item per row (full-width) */
+  .grid-row:nth-child(6) .grid-item,
+  .grid-row:nth-child(7) .grid-item {
+    flex: 1 0 100%; /* Full-width for 1 image */
+  }
+
+  /* For rows 8 to 10: Adjust images to 2 per row if necessary */
+  .grid-row:nth-child(8) .grid-item,
+  .grid-row:nth-child(9) .grid-item,
+  .grid-row:nth-child(10) .grid-item {
+    flex: 1 0 50%; /* Two items per row */
+  }
+}
+

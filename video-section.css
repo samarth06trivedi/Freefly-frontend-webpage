@@ -1,0 +1,132 @@
+/* Video Section */
+.video-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .video-section video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  /* Video Card */
+  .video-card {
+    position: absolute;
+    bottom: 3%;
+    right: 1.5%;
+    width: 450px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card-background {
+    position: relative;
+    width: 100%;
+    border-radius: 25px;
+    overflow: hidden;
+  }
+  
+  .background-img {
+    width: 100%;
+    display: block;
+  }
+  
+  .drone-img {
+    position: absolute;
+    top: 10%; /* Adjusted to keep it visually aligned */
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 80%; /* Increased size for the drone image */
+    z-index: 2;
+  }
+  
+  
+  .card-overlay-content {
+    position: absolute;
+    bottom: 0; /* Align to the bottom of the card */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    z-index: 3;
+    padding: 10px 20px;
+  }
+  
+  .card-overlay-content h3 {
+    margin:0;
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #ddff24; /* ASTRO text color */
+    letter-spacing: 1rem;
+    font-family: "Smooch Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .card-overlay-content p {
+    margin: 0 5px;
+    font-size: 1rem;
+    color: white; /* Text inside the card */
+    letter-spacing: 0.2rem;
+    font-family: "Smooch Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .card-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .card-buttons .btn {
+    background-color: #293a45; /* Button background color */
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    font-family: "Smooch Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .card-buttons .btn:hover {
+    background-color: #1f2d36; /* Darker shade for hover */
+  }
+  
+  /* Adjust for responsiveness */
+  @media (max-width: 768px) {
+    .video-card {
+      width: 90%;
+      bottom: 10%;
+      right: 5%;
+    }
+  
+    .drone-img {
+      width: 80%; /* Adjust size for smaller screens */
+    }
+  }
+  

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- <link rel="stylesheet" href="./Styles.css"/> -->
+  <link rel="stylesheet" href="./navbar.css"/>
+  <link rel="stylesheet" href="./video-section.css"/>
+  <link rel="stylesheet" href="./image-grid.css"/>
+  <link rel="stylesheet" href="./footer.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=Smooch+Sans&display=swap" rel="stylesheet">
+  <title>Freefly</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">FREEFLY</div>
+    <ul class="nav-links">
+      <li><a href="#">Drones</a></li>
+      <li><a href="#">Gimbals</a></li>
+      <li><a href="#">Camera</a></li>
+      <li><a href="#">Power</a></li>
+      <li><a href="#">Why Freefly</a></li>
+      <li><a href="#">Community</a></li>
+      <li><a href="#">Support</a></li>
+      <li><a href="#">Store</a></li>
+    </ul>
+    <button class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+  
+<!-- video section -->
+  <section class="video-section">
+    <video autoplay muted loop>
+      <source src="./images/image on video/background video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="video-overlay"></div>
+    
+    <div class="video-card">
+      <div class="card-background">
+        <img class="background-img" src="./images/image on video/home-hero-text-bg.jpg" alt="Card Background">
+        <img class="drone-img" src="./images/image on video/home-hero.png" alt="Drone">
+        <div class="card-overlay-content">
+          <h3>ASTRO</h3>
+          <p>BLUE APPROVED - READY TO WORK</p>
+          <div class="card-buttons">
+            <button class="btn">Learn More</button>
+            <button class="btn">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Image Grid Section -->
+  <section class="image-grid">
+    <!-- Row 1 -->
+    <div class="grid-row">
+      <div class="grid-item">
+        <img src="./images/ember-s5k-tile.jpg" alt="Ember S5K">
+        <div class="content-overlay">
+          <h3>Ember S5K</h3>
+          <p>Cinematic / Commercial Imaging at 5K 600 fps and 4K 800 fps</p>
+          <button onclick="window.location.href='learn-more-link-1.html'">Learn More</button>
+          <button onclick="window.location.href='buy-now-link-1.html'">Buy Now</button>
+        </div>
+      </div>
+      <div class="grid-item">
+        <img src="./images/ember-s2-5k-tile.jpg" alt="Ember S2.5K">
+        <div class="content-overlay">
+          <h3>Ember S2.5K</h3>
+          <p>Scientific Imaging and analysis at 2.5K 2277fps up to 3563fps</p>
+          <button onclick="window.location.href='learn-more-link-2.html'">Learn More</button>
+          <button onclick="window.location.href='buy-now-link-2.html'">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="grid-row">
+      <div class="grid-item">
+        <img src="./images/alta-x-tile.jpg" alt="Alta X">
+        <div class="content-overlay">
+          <h3>Alta X</h3>
+          <p>Large, efficient props give Alta X crisp control and unmatched precision.</p>
+          <button onclick="window.location.href='learn-more-link-3.html'">Learn More</button>
+          <button onclick="window.location.href='buy-now-link-3.html'">Buy Now</button>
+        </div>
+      </div>
+      <div class="grid-item">
+        <img src="./images/pilotPro-main02a.jpg" alt="Pilot Pro Controller">
+        <div class="content-overlay">
+          <h3>Pilot Pro Controller</h3>
+          <p>Precision in your hands, confidence in every flight.</p>
+          <button onclick="window.location.href='learn-more-link-4.html'">Learn More</button>
+          <button onclick="window.location.href='buy-now-link-4.html'">Buy Now</button>
+        </div>
+      </div>
+      <div class="grid-item">
+        <img src="./images/astro.jpg" alt="Astro">
+        <div class="content-overlay">
+          <h3>Astro</h3>
+          <p>Freefly’s latest commercial drone platform with RTK, 61 megapixel Sony camera, LTE cloud connectivity.</p>
+          <button onclick="window.location.href='learn-more-link-5.html'">Learn More</button>
+          <button onclick="window.location.href='buy-now-link-5.html'">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 3 (3 images) -->
+    <div class="grid-row">
+      <div class="grid-item">
+        <img src="./images/movi-xl.jpg" alt="Movi XL">
+        <div class="content-overlay">
+          <h3>Movi XL</h3>
+          <p>Everything great about the Movi Pro plus serious horsepower for the world’s biggest cameras.</p>
+          <button onclick="window.location.href='learn-more-link-6.html'">Learn More</button>
+          <button onclick="window.location.href='buy-now-link-6.html'">Buy Now</button>
+        </div>
+      </div>
+      <div class="grid-item">
+        <img src="./images/movi-carbon.jpg" alt="Movi Carbon">
+        <div class="content-overlay">
+          <h3>Movi Carbon</h3>
+          <p>World’s first handheld and drone mountable 5-axis camera stabilizer.</p>
+          <button onclick="window.location.href='learn-more-link-7.html'">Learn More</button>
+          <button onclick="window.location.href='buy-now-link-7.html'">Buy Now</button>
+        </div>
+      </div>
+      <div class="grid-item">
+        <img src="./images/movi-pro.jpg" alt="Movi Pro">
+        <div class="content-overlay">
+          <h3>Movi Pro</h3>
+          <p>A lightweight, portable camera movement system for world class production quality video.</p>
+          <button onclick="window.location.href='learn-more-link-8.html'">Learn More</button>
+          <button onclick="window.location.href='buy-now-link-8.html'">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 4 (2 images) -->
+    <div class="grid-row">
+      <div class="grid-item">
+        <img src="./images/wave-tile.jpg" alt="Wave Tile">
+        <div class="content-overlay">
+          <h3>Wave Tile</h3>
+          <p>We designed Wave to be the most efficient high speed camera. It’s small, light, and insanely fast.</p>
+          <button onclick="window.location.href='learn-more-link-9.html'">Learn More</button>
+          <button onclick="window.location.href='buy-now-link-9.html'">Buy Now</button>
+        </div>
+      </div>
+      <div class="grid-item">
+        <img src="./images/power-systems.jpg" alt="Power Systems">
+        <div class="content-overlay">
+          <h3>Power Systems</h3>
+          <p>Powerful. Smart. Open. Adaptable. Efficient. Reliable.</p>
+          <button onclick="window.location.href='learn-more-link-10.html'">Learn More</button>
+          <button onclick="window.location.href='buy-now-link-10.html'">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 5 (4 images) -->
+    <div class="grid-row">
+      <div class="grid-item">
+        <img src="./images/frx-pro.jpg" alt="FRX Pro">
+        <div class="content-overlay">
+          <h3>FRX Pro</h3>
+          <p>Next generation, long range wireless control for the Mōvi.</p>
+          <button onclick="window.location.href='learn-more-link-11.html'">Learn More</button>
+          <button onclick="window.location.href='buy-now-link-11.html'">Buy Now</button>
+        </div>
+      </div>
+      <div class="grid-item">
+        <img src="./images/movi-controller.jpg" alt="Movi Controller">
+        <div class="content-overlay">
+          <h3>Movi Controller</h3>
+          <p>Professional grade remote system with full control over Mōvi and settings.</p>
+          <button onclick="window.location.href='learn-more-link-12.html'">Learn More</button>
+          <button onclick="window.location.href='buy-now-link-12.html'">Buy Now</button>
+        </div>
+      </div>
+      <div class="grid-item">
+        <img src="./images/movi-wheels.jpg" alt="Movi Wheels">
+        <div class="content-overlay">
+          <h3>Movi Wheels</h3>
+          <p>Add classic wheeled control to your Mōvi system.</p>
+          <button onclick="window.location.href='learn-more-link-13.html'">Learn More</button>
+          <button onclick="window.location.href='buy-now-link-13.html'">Buy Now</button>
+        </div>
+      </div>
+      <div class="grid-item">
+        <img src="./images/rtk.jpg" alt="RTK">
+        <div class="content-overlay">
+          <h3>RTK</h3>
+          <p>Enjoy centimeter level precision on your Alta X with Multi-band RTK system.</p>
+          <button onclick="window.location.href='learn-more-link-14.html'">Learn More</button>
+          <button onclick="window.location.href='buy-now-link-14.html'">Buy Now</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Row 6 (1 image) -->
+    <div class="grid-row">
+      <div class="grid-item">
+        <img src="./images/robotics.jpg" alt="Image 16">
+        <div class="content-overlay">
+          <h3>Freefly Robotics</h3>
+          <p>Combining deep technical insight with creativity to build useful tools for the world.</p>
+          <button onclick="window.location.href='learn-more-link-14.html'">Learn More</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 7 (1 image) -->
+    <div class="grid-row">
+      <div class="grid-item">
+        <img src="./images/movie posters/movie posters.jpg" alt="Image 18">
+        <div class="content-overlay">
+          <h3>Powered by Freefly</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 8 (3 images) -->
+  <div class="grid-row">
+    <div class="grid-item">
+      <img src="./images/careers.jpg" alt="Image 19">
+      <div class="content-overlay">
+        <h3>Careers</h3>
+        <p>If you're passionate about changing the world of filmmaking and robotics, get in touch!</p>
+      </div>
+    </div>
+    <div class="grid-item">
+      <img src="./images/Training.jpg" alt="Image 20">
+      <div class="content-overlay">
+        <h3>Training</h3>
+        <p>Ground school and flight training on all Freefly drones</p>
+      </div>
+    </div>
+    <div class="grid-item">
+      <img src="./images/why-freefly.jpg" alt="Image 21">
+      <div class="content-overlay">
+        <h3>Why Freefly</h3>
+        <p>Freefly's innovation per person is off the charts!</p>
+      </div>
+    </div>
+  </div>
+
+
+    <!-- Row 9 (2 images) -->
+    <div class="grid-row">
+      <div class="grid-item">
+        <img src="./images/freeflyer.jpg" alt="Image 21">
+        <div class="content-overlay">
+          <h3>Freefly on instagram</h3>
+        </div>
+      </div>
+      <div class="grid-item">
+        <img src="./images/timeline.jpg" alt="Image 22">
+        <div class="content-overlay">
+          <h3>Freefly timeline</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 10 (2 images) -->
+    <div class="grid-row">
+      <div class="grid-item">
+        <img src="./images/every-axis.jpg" alt="Image 23">
+        <div class="content-overlay">
+          <h3>Every Axis Blogs/Podcast</h3>
+        </div>
+      </div>
+      <div class="grid-item">
+        <img src="./images/case-studies.jpg" alt="Image 24">
+        <div class="content-overlay">
+          <h3>Case Studies</h3>
+        </div>
+      </div>
+    </div>  
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4 class="toggle-btn">
+          Community <span class="plus-btn">+</span>
+        </h4>
+        <ul>
+          <li><a href="#">Case Studies</a></li>
+          <li><a href="#">Every Axis Blog</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4 class="toggle-btn">
+          Products <span class="plus-btn">+</span>
+        </h4>
+        <ul>
+          <li><a href="#">Alta X</a></li>
+          <li><a href="#">Astro – US Made Commercial Drone</a></li>
+          <li><a href="#">Pilot Pro</a></li>
+          <li><a href="#">Ember S5K</a></li>
+          <li><a href="#">Ember S2.5K</a></li>
+          <li><a href="#">Wave</a></li>
+          <li><a href="#">Mōvi Pro</a></li>
+          <li><a href="#">Mōvi XL</a></li>
+          <li><a href="#">Mōvi Carbon</a></li>
+          <li><a href="#">Mōvi Controller</a></li>
+          <li><a href="#">Mōvi Wheels</a></li>
+          <li><a href="#">Power Systems</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4 class="toggle-btn">
+          Support <span class="plus-btn">+</span>
+        </h4>
+        <ul>
+          <li><a href="#">Knowledge Base</a></li>
+          <li><a href="#">Wiki</a></li>
+          <li><a href="#">Service Bulletins</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Service Request</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4 class="toggle-btn">
+          Store <span class="plus-btn">+</span>
+        </h4>
+        <ul>
+          <li><a href="#">Freefly Store</a></li>
+          <li><a href="#">Dealers</a></li>
+          <li><a href="#">Hours of Operation</a></li>
+          <li><a href="#">Shipping Policies</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Newsletter</h4>
+        <form>
+          <input type="email" placeholder="Your email address" required />
+          <button type="submit">Subscribe</button>
+        </form>
+        <div class="social-icons">
+          <a href="#"><img src="./images/social logos/icons8-facebook-logo-50.png" alt="Facebook" /></a>
+          <a href="#"><img src="./images/social logos/icons8-twitter-bird-50.png" alt="Twitter" /></a>
+          <a href="#"><img src="./images/social logos/icons8-instagram-50.png" alt="Instagram" /></a>
+          <a href="#"><img src="./images/social logos/icons8-youtube-50.png" alt="YouTube" /></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Freefly. All rights reserved.</p>
+    </div>
+  </footer>
+  
+
+
+  <script src="./navbar.js"></script>
+  <script src="./footer.js"></script> 
+  </body>
+</html>
+
+
